@@ -1,0 +1,45 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 2rem $side-padding;
+
+  &__logo {
+    margin-right: auto;
+    color: $color-primary;
+    font-size: 6.5rem;
+    font-weight: 500;
+  }
+
+  &__nav {
+  }
+
+  &__link {
+    font-size: 1.7rem;
+    text-decoration: none;
+    color: $color-black;
+    transition: all 0.2s;
+
+    &:not(:last-child) {
+      margin-right: 2.5rem;
+    }
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+  &__link--primary {
+    background-color: $color-primary;
+    border-radius: 1rem;
+    padding: 1rem 2.5rem;
+    color: $color-white;
+    font-weight: 600;
+    font-size: 2.2rem;
+    box-shadow: 0 0.4rem 0.4rem rgba(#000, 0.2);
+
+    &:hover {
+      color: $color-white;
+      background-color: $color-primary-dark;
+    }
+  }
+}
