@@ -1,0 +1,29 @@
+.hero {
+  padding: $side-padding $side-padding;
+  display: grid;
+  grid-column-gap: 11rem;
+  grid-template-columns: 1fr 1fr;
+
+  &__text-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 5rem;
+    align-self: end;
+  }
+
+  &__heading {
+    grid-column: 1 / -1;
+    margin-bottom: 2rem;
+  }
+
+  &__paragraph {
+    grid-column: 1 / -1;
+    margin-bottom: 4rem;
+  }
+
+  &__graphic {
+    max-width: 100%;
+    align-self: center;
+    justify-self: center;
+  }
+}
