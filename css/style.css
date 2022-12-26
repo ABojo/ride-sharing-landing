@@ -25,6 +25,18 @@ input,
 button {
   font: inherit; }
 
+.mb-sm {
+  margin-bottom: 2rem; }
+
+.mb-md {
+  margin-bottom: 4rem; }
+
+.mb-big {
+  margin-bottom: 6rem; }
+
+.mb-bigger {
+  margin-bottom: 8rem; }
+
 .header {
   display: flex;
   align-items: center;
@@ -77,6 +89,32 @@ button {
     align-self: center;
     justify-self: center; }
 
+.sign-up {
+  background-color: #75bf7a;
+  margin: 0 auto;
+  padding: 5rem;
+  border-radius: 2rem;
+  margin: 0 5rem;
+  display: flex;
+  align-items: center; }
+  .sign-up__message {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-right: auto;
+    max-width: 30rem; }
+  .sign-up__form {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    grid-column-gap: 2rem;
+    width: 60%; }
+  .sign-up__phone-input {
+    width: 100%;
+    font-size: 2rem;
+    padding-left: 3rem;
+    border-radius: 0.5rem;
+    border: none; }
+
 .btn {
   display: inline-block;
   background-color: #000;
@@ -89,7 +127,11 @@ button {
   text-decoration: none;
   display: flex;
   align-items: center;
-  border-radius: 1rem;
-  justify-content: center; }
+  border-radius: 0.5rem;
+  justify-content: center;
+  cursor: pointer;
+  border: none; }
   .btn__icon {
     margin-right: 1rem; }
+  .btn--small-text {
+    font-size: 2rem; }

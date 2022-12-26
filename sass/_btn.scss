@@ -10,10 +10,16 @@
   text-decoration: none;
   display: flex;
   align-items: center;
-  border-radius: 1rem;
+  border-radius: $br-small;
   justify-content: center;
+  cursor: pointer;
+  border: none;
 
   &__icon {
     margin-right: 1rem;
+  }
+
+  &--small-text {
+    font-size: 2rem;
   }
 }
