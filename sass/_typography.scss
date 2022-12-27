@@ -4,7 +4,26 @@
   line-height: 1;
 }
 
+.heading-2 {
+  font-size: 4.5rem;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.heading-4 {
+  font-size: 2.2rem;
+  text-transform: uppercase;
+}
+
 .paragraph {
   color: $color-text-grey;
   font-size: 2.3rem;
+
+  &--small {
+    font-size: 2rem;
+  }
+}
+
+.highlight {
+  color: $color-primary;
 }
