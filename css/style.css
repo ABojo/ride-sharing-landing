@@ -25,6 +25,11 @@ input,
 button {
   font: inherit; }
 
+.container {
+  max-width: 200rem;
+  margin: 0 auto;
+  width: 95%; }
+
 .mb-sm {
   margin-bottom: 2rem; }
 
@@ -91,29 +96,27 @@ button {
 
 .sign-up {
   background-color: #75bf7a;
-  margin: 0 auto;
   padding: 5rem;
   border-radius: 2rem;
-  margin: 0 5rem;
   display: flex;
   align-items: center; }
   .sign-up__message {
     color: #fff;
     font-size: 2.5rem;
     font-weight: 600;
-    margin-right: auto;
-    max-width: 30rem; }
+    margin-right: auto; }
   .sign-up__form {
     display: grid;
     grid-template-columns: 1fr max-content;
     grid-column-gap: 2rem;
-    width: 60%; }
+    width: 50%; }
   .sign-up__phone-input {
     width: 100%;
     font-size: 2rem;
     padding-left: 3rem;
     border-radius: 0.5rem;
-    border: none; }
+    border: none;
+    margin-right: 3rem; }
 
 .btn {
   display: inline-block;
