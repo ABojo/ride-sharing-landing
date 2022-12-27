@@ -8,6 +8,11 @@
   line-height: 1;
   text-transform: uppercase; }
 
+.heading-3 {
+  font-size: 3.3rem;
+  font-weight: 600;
+  line-height: 1; }
+
 .heading-4 {
   font-size: 2.2rem;
   text-transform: uppercase; }
@@ -116,17 +121,21 @@ button {
   padding: 5rem;
   border-radius: 2rem;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  max-width: 150rem;
+  margin-left: auto;
+  margin-right: auto; }
   .sign-up__message {
     color: #fff;
     font-size: 2.5rem;
     font-weight: 600;
-    margin-right: auto; }
+    margin-right: 10rem;
+    width: 25rem; }
   .sign-up__form {
+    flex: 1;
     display: grid;
     grid-template-columns: 1fr max-content;
-    grid-column-gap: 2rem;
-    width: 50%; }
+    grid-column-gap: 2rem; }
   .sign-up__phone-input {
     width: 100%;
     font-size: 2rem;
@@ -138,7 +147,6 @@ button {
 .how-to {
   display: grid;
   grid-template-columns: 1fr max-content 1fr;
-  align-items: center;
   grid-column-gap: 5rem;
   grid-row-gap: 3rem; }
   .how-to__intro {
@@ -199,6 +207,70 @@ button {
     cursor: pointer; }
     .how-to__dot--active {
       opacity: 1; }
+
+.benefits {
+  display: grid;
+  grid-template-rows: min-content 1fr 1fr 1fr;
+  grid-row-gap: 8rem;
+  max-width: 100rem;
+  margin: 0 auto;
+  margin-bottom: 16rem; }
+  .benefits__heading {
+    grid-column: 1 / -1;
+    justify-self: center; }
+
+.benefit {
+  width: 90%;
+  background-color: #fff;
+  padding: 3rem;
+  border-radius: 2rem;
+  display: grid;
+  grid-template-columns: min-content 25rem 1fr;
+  grid-column-gap: 4rem;
+  grid-row-gap: 2rem;
+  align-items: center;
+  justify-items: center; }
+  .benefit__heading {
+    align-self: end; }
+  .benefit__number {
+    font-size: 8.8rem;
+    color: #75bf7a;
+    line-height: 1;
+    align-self: end; }
+  .benefit__paragraph {
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+    align-self: start;
+    justify-self: start; }
+  .benefit__graphic {
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+    justify-self: end;
+    width: 60%; }
+  .benefit--2 {
+    justify-self: end; }
+  .benefit--2 > .benefit__graphic {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    justify-self: start; }
+  .benefit--2 > .benefit__number {
+    grid-column: 2 / 3;
+    grid-row: 1 / 1;
+    justify-self: end; }
+  .benefit--2 > .benefit__heading {
+    grid-column: 3 / 4;
+    grid-row: 1 / 1;
+    justify-self: start;
+    align-self: end; }
+  .benefit--2 > .benefit__paragraph {
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+    justify-self: end;
+    align-self: start; }
+
+.benefit--2 {
+  grid-template-columns: 1fr 25rem min-content;
+  justify-self: end; }
 
 .btn {
   display: inline-block;
