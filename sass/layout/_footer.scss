@@ -12,6 +12,10 @@
     font-size: 4.7rem;
     align-self: center;
     margin-right: 9rem;
+
+    @include respond-to("tablet") {
+      display: none;
+    }
   }
 
   &__items {

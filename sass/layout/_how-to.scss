@@ -4,6 +4,10 @@
   grid-column-gap: 5rem;
   grid-row-gap: 3rem;
 
+  @include respond-to("tablet") {
+    grid-template-columns: 1fr 1fr;
+  }
+
   &__intro {
     grid-column: 1 / -1;
     justify-self: center;
@@ -14,6 +18,7 @@
 
   &__step {
     max-width: 30rem;
+
     &--1,
     &--3 {
       grid-column: 1 / 2;
@@ -25,6 +30,32 @@
     &--4 {
       grid-column: 3 / 4;
       text-align: left;
+    }
+
+    @include respond-to("tablet") {
+      &--1,
+      &--3 {
+        grid-column: 1 / 2;
+      }
+
+      &--2,
+      &--4 {
+        grid-column: 2 /3;
+      }
+
+      &--1,
+      &--2 {
+        grid-row: 4/5;
+        text-align: left;
+        justify-self: center;
+      }
+
+      &--3,
+      &--4 {
+        grid-row: 5/6;
+        text-align: left;
+        justify-self: center;
+      }
     }
   }
 
@@ -53,10 +84,19 @@
     grid-row: 2 / 5;
     align-self: center;
     justify-self: center;
+
+    @include respond-to("tablet") {
+      grid-column: 1 / -1;
+      grid-row: 2 / 3;
+    }
   }
 
   &__img {
     width: 20rem;
+
+    @include respond-to("tablet") {
+      width: 15rem;
+    }
   }
 
   &__circle {
@@ -64,6 +104,11 @@
     height: 35rem;
     background-color: $color-primary;
     border-radius: 50%;
+
+    @include respond-to("tablet") {
+      width: 25rem;
+      height: 25rem;
+    }
   }
 
   &__controls {
@@ -73,6 +118,11 @@
     justify-self: center;
     display: flex;
     justify-content: space-between;
+
+    @include respond-to("tablet") {
+      grid-column: 1 / -1;
+      grid-row: 3 / 4;
+    }
   }
 
   &__dot {
@@ -85,9 +135,6 @@
 
     &--active {
       opacity: 1;
-    }
-
-    &:hover {
     }
   }
 }

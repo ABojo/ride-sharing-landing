@@ -18,6 +18,10 @@
 
   &__icon {
     margin-right: 1rem;
+
+    @include respond-to("tablet") {
+      width: 4rem;
+    }
   }
 
   &--small-text {
@@ -26,5 +30,11 @@
 
   &:hover {
     background-color: $color-grey-dark;
+  }
+
+  @include respond-to("tablet") {
+    font-size: 2rem;
+    padding: 1rem 1rem;
+    align-self: end;
   }
 }

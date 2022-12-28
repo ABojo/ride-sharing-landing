@@ -24,6 +24,9 @@
   align-items: center;
   justify-items: center;
 
+  @include respond-to("tablet") {
+    width: 100%;
+  }
   &__heading {
     align-self: end;
   }
