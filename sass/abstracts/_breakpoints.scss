@@ -1,0 +1,8 @@
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == "laptop" {
+    //1050px
+    @media (max-width: 65.625em) {
+      @content;
+    }
+  }
+}
