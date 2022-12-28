@@ -1,0 +1,50 @@
+.footer {
+  background-color: $color-white;
+  padding: 10rem $side-padding;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    max-width: 130rem;
+  }
+
+  &__logo {
+    font-size: 4.7rem;
+    align-self: center;
+    margin-right: 9rem;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-column-gap: 3rem;
+    justify-content: center;
+    margin-right: 12rem;
+  }
+
+  &__item {
+    font-size: 1.8rem;
+    color: $color-purple-light;
+    display: block;
+  }
+
+  &__heading {
+    color: $color-purple-dark;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
+
+  &__links {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, max-content));
+    grid-gap: 2rem;
+    justify-items: center;
+  }
+
+  &__btn {
+    align-self: center;
+    padding: 1rem;
+    font-size: 1.8rem;
+  }
+}

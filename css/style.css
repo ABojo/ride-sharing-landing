@@ -64,6 +64,30 @@ button {
 .mb-xl {
   margin-bottom: 16rem; }
 
+.btn {
+  display: inline-block;
+  background-color: #000;
+  outline: none;
+  padding: 2rem 1rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 2.5rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  border-radius: 0.5rem;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s; }
+  .btn__icon {
+    margin-right: 1rem; }
+  .btn--small-text {
+    font-size: 2rem; }
+  .btn:hover {
+    background-color: #2c2c2c; }
+
 .header {
   display: flex;
   align-items: center;
@@ -272,26 +296,38 @@ button {
   grid-template-columns: 1fr 25rem min-content;
   justify-self: end; }
 
-.btn {
-  display: inline-block;
-  background-color: #000;
-  outline: none;
-  padding: 2rem 1rem;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 800;
-  font-size: 2.5rem;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  border-radius: 0.5rem;
-  justify-content: center;
-  cursor: pointer;
-  border: none;
-  transition: all 0.2s; }
-  .btn__icon {
-    margin-right: 1rem; }
-  .btn--small-text {
-    font-size: 2rem; }
-  .btn:hover {
-    background-color: #2c2c2c; }
+.footer {
+  background-color: #fff;
+  padding: 10rem 5rem; }
+  .footer__container {
+    display: flex;
+    align-items: center;
+    max-width: 130rem; }
+  .footer__logo {
+    font-size: 4.7rem;
+    align-self: center;
+    margin-right: 9rem; }
+  .footer__items {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-column-gap: 3rem;
+    justify-content: center;
+    margin-right: 12rem; }
+  .footer__item {
+    font-size: 1.8rem;
+    color: #8b8ba5;
+    display: block; }
+  .footer__heading {
+    color: #272042;
+    font-size: 2.2rem;
+    margin-bottom: 2rem; }
+  .footer__links {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, max-content));
+    grid-gap: 2rem;
+    justify-items: center; }
+  .footer__btn {
+    align-self: center;
+    padding: 1rem;
+    font-size: 1.8rem; }
