@@ -1,13 +1,14 @@
-@import "variables";
-@import "typography";
-@import "base";
-@import "utilities";
+@import "./abstracts/variables";
 
-@import "btn";
+@import "./base/typography";
+@import "./base/base";
+@import "./base/utilities";
 
-@import "header";
-@import "hero";
-@import "sign-up";
-@import "how-to";
-@import "benefits";
-@import "footer";
+@import "./components/btn";
+
+@import "./layout/header";
+@import "./layout/hero";
+@import "./layout/sign-up";
+@import "./layout/how-to";
+@import "./layout/benefits";
+@import "./layout/footer";
