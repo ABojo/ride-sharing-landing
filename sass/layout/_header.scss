@@ -3,55 +3,13 @@
   align-items: center;
   padding: 2rem $side-padding;
   background-color: $color-white;
-
-  @include respond-to("small-tablet") {
-    &__nav {
-      display: none;
-    }
-
-    &__hamburger {
-      &,
-      &::after,
-      &::before {
-        content: "";
-        width: 5rem;
-        background-color: $color-black;
-        height: 2px;
-        display: block;
-        border: none;
-      }
-
-      &::before {
-        transform: translateY(-1.1rem);
-      }
-
-      &::after {
-        transform: translateY(1rem);
-      }
-
-      &.open {
-        transform: rotate(45deg);
-
-        &::after {
-          display: none;
-        }
-
-        &::before {
-          transform: translateY(0) rotate(-90deg);
-        }
-      }
-    }
-  }
+  position: relative;
 
   &__logo {
     margin-right: auto;
     color: $color-primary;
     font-size: 6.5rem;
     font-weight: 500;
-
-    @include respond-to("small-tablet") {
-      font-size: 5rem;
-    }
   }
 
   &__link {
@@ -81,6 +39,83 @@
     &:hover {
       color: $color-white;
       background-color: $color-primary-dark;
+    }
+  }
+
+  @include respond-to("small-tablet") {
+    &__nav {
+      display: none;
+    }
+
+    &__logo {
+      font-size: 5rem;
+    }
+
+    &__hamburger {
+      &,
+      &::after,
+      &::before {
+        content: "";
+        width: 5rem;
+        background-color: $color-black;
+        height: 2px;
+        display: block;
+        border: none;
+      }
+
+      &::before {
+        transform: translateY(-1.1rem);
+      }
+
+      &::after {
+        transform: translateY(1rem);
+      }
+    }
+
+    &__hamburger.open {
+      transform: rotate(45deg);
+
+      &::after {
+        display: none;
+      }
+
+      &::before {
+        transform: translateY(0) rotate(-90deg);
+      }
+    }
+
+    &__hamburger.open + &__nav {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: $color-white;
+    }
+
+    &__hamburger.open + &__nav > &__link {
+      width: 100%;
+      padding: 2rem;
+      margin-right: 0;
+      border-bottom: 1px solid rgba($color-black, 0.2);
+
+      &:first-child {
+        border-top: 1px solid rgba($color-black, 0.2);
+      }
+    }
+
+    &__hamburger.open + &__nav > &__link--primary {
+      background-color: transparent;
+      box-shadow: none;
+      font-size: 1.7rem;
+      text-decoration: none;
+      color: $color-black;
+      transition: all 0.2s;
+      font-weight: 400;
+      border-radius: 0;
     }
   }
 }
