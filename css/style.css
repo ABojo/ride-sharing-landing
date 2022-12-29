@@ -104,11 +104,17 @@ button {
   align-items: center;
   padding: 2rem 5rem;
   background-color: #fff; }
+  @media (max-width: 40.625em) {
+    .header__nav {
+      display: none; } }
   .header__logo {
     margin-right: auto;
     color: #75bf7a;
     font-size: 6.5rem;
     font-weight: 500; }
+    @media (max-width: 40.625em) {
+      .header__logo {
+        font-size: 5rem; } }
   .header__link {
     font-size: 1.7rem;
     text-decoration: none;
@@ -346,6 +352,8 @@ button {
     justify-self: end;
     width: 60%; }
   .benefit--2 {
+    justify-self: end;
+    grid-template-columns: 1fr 25rem min-content;
     justify-self: end; }
   .benefit--2 > .benefit__graphic {
     grid-column: 1 / 2;
@@ -365,10 +373,31 @@ button {
     grid-row: 2 / 3;
     justify-self: end;
     align-self: start; }
-
-.benefit--2 {
-  grid-template-columns: 1fr 25rem min-content;
-  justify-self: end; }
+  @media (max-width: 40.625em) {
+    .benefit {
+      grid-template-columns: max-content 1fr; }
+      .benefit__number,
+      .benefit--2 > .benefit__number {
+        grid-column: 1 / 2;
+        justify-self: center;
+        font-size: 6rem; }
+      .benefit__heading,
+      .benefit--2 > .benefit__heading {
+        grid-column: 2 / 3;
+        justify-self: start;
+        align-self: center; }
+      .benefit__graphic,
+      .benefit--2 > .benefit__graphic {
+        justify-self: center;
+        grid-row: 2 / 3;
+        grid-column: 1 / -1;
+        width: 50%; }
+      .benefit__paragraph,
+      .benefit--2 > .benefit__paragraph {
+        grid-row: 3/4;
+        grid-column: 1 / -1;
+        justify-self: center;
+        text-align: center; } }
 
 .footer {
   background-color: #fff;
@@ -377,6 +406,10 @@ button {
     display: flex;
     align-items: center;
     max-width: 130rem; }
+    @media (max-width: 40.625em) {
+      .footer__container {
+        flex-direction: column;
+        justify-content: center; } }
   .footer__logo {
     font-size: 4.7rem;
     align-self: center;
@@ -390,6 +423,10 @@ button {
     grid-column-gap: 3rem;
     justify-content: center;
     margin-right: 12rem; }
+    @media (max-width: 40.625em) {
+      .footer__items {
+        margin-right: 0;
+        margin-bottom: 6rem; } }
   .footer__item {
     font-size: 1.8rem;
     color: #8b8ba5;
@@ -404,6 +441,9 @@ button {
     grid-template-columns: repeat(auto-fit, minmax(20rem, max-content));
     grid-gap: 2rem;
     justify-items: center; }
+    @media (max-width: 40.625em) {
+      .footer__links {
+        justify-content: center; } }
   .footer__btn {
     align-self: center;
     padding: 1rem;

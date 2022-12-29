@@ -6,6 +6,11 @@
     display: flex;
     align-items: center;
     max-width: 130rem;
+
+    @include respond-to("small-tablet") {
+      flex-direction: column;
+      justify-content: center;
+    }
   }
 
   &__logo {
@@ -24,6 +29,11 @@
     grid-column-gap: 3rem;
     justify-content: center;
     margin-right: 12rem;
+
+    @include respond-to("small-tablet") {
+      margin-right: 0;
+      margin-bottom: 6rem;
+    }
   }
 
   &__item {
@@ -44,6 +54,10 @@
     grid-template-columns: repeat(auto-fit, minmax(20rem, max-content));
     grid-gap: 2rem;
     justify-items: center;
+
+    @include respond-to("small-tablet") {
+      justify-content: center;
+    }
   }
 
   &__btn {

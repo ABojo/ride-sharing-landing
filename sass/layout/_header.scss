@@ -4,11 +4,21 @@
   padding: 2rem $side-padding;
   background-color: $color-white;
 
+  @include respond-to("small-tablet") {
+    &__nav {
+      display: none;
+    }
+  }
+
   &__logo {
     margin-right: auto;
     color: $color-primary;
     font-size: 6.5rem;
     font-weight: 500;
+
+    @include respond-to("small-tablet") {
+      font-size: 5rem;
+    }
   }
 
   &__link {

@@ -12,4 +12,11 @@
       @content;
     }
   }
+
+  @if $breakpoint == "small-tablet" {
+    //650px
+    @media (max-width: 40.625em) {
+      @content;
+    }
+  }
 }
