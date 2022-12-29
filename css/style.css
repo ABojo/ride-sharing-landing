@@ -35,7 +35,9 @@
 .highlight {
   color: #75bf7a; }
 
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: inherit; }
@@ -115,7 +117,18 @@ button {
   background-color: #fff; }
   @media (max-width: 40.625em) {
     .header__nav {
-      display: none; } }
+      display: none; }
+    .header__hamburger, .header__hamburger::after, .header__hamburger::before {
+      content: "";
+      width: 5rem;
+      background-color: #000;
+      height: 2px;
+      display: block;
+      border: none; }
+    .header__hamburger::before {
+      transform: translateY(-1.1rem); }
+    .header__hamburger::after {
+      transform: translateY(1rem); } }
   .header__logo {
     margin-right: auto;
     color: #75bf7a;

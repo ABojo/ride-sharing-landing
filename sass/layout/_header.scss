@@ -8,6 +8,27 @@
     &__nav {
       display: none;
     }
+
+    &__hamburger {
+      &,
+      &::after,
+      &::before {
+        content: "";
+        width: 5rem;
+        background-color: $color-black;
+        height: 2px;
+        display: block;
+        border: none;
+      }
+
+      &::before {
+        transform: translateY(-1.1rem);
+      }
+
+      &::after {
+        transform: translateY(1rem);
+      }
+    }
   }
 
   &__logo {
