@@ -26,11 +26,20 @@
       margin-right: 0;
       margin-bottom: 2rem;
     }
+
+    @include respond-to("phone") {
+      font-size: 2rem;
+    }
   }
 
   &__form {
     @include respond-to("tablet") {
       width: 100%;
+      align-items: stretch;
+    }
+
+    @include respond-to("phone") {
+      grid-template-columns: 1fr;
     }
 
     flex: 1;
@@ -46,5 +55,22 @@
     border-radius: $br-small;
     border: none;
     margin-right: 3rem;
+
+    @include respond-to("tablet") {
+      padding: 2rem;
+    }
+
+    @include respond-to("phone") {
+      margin-right: 0;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__btn {
+    align-self: stretch;
+
+    @include respond-to("phone") {
+      padding: 2rem;
+    }
   }
 }

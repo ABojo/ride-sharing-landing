@@ -19,4 +19,11 @@
       @content;
     }
   }
+
+  @if $breakpoint == "phone" {
+    //500px
+    @media (max-width: 31.25em) {
+      @content;
+    }
+  }
 }

@@ -2,19 +2,28 @@
   font-size: 6rem;
   text-transform: uppercase;
   line-height: 1; }
+  @media (max-width: 31.25em) {
+    .heading-1 {
+      font-size: 5rem; } }
 
 .heading-2 {
   font-size: 4.5rem;
   line-height: 1;
   text-transform: uppercase; }
+  @media (max-width: 31.25em) {
+    .heading-2 {
+      font-size: 3.5rem; } }
 
 .heading-3 {
   font-size: 3.3rem;
   font-weight: 600;
   line-height: 1; }
+  @media (max-width: 31.25em) {
+    .heading-3 {
+      font-size: 2.5rem; } }
 
 .heading-4 {
-  font-size: 2.2rem;
+  font-size: 2.3rem;
   text-transform: uppercase; }
 
 .paragraph {
@@ -144,6 +153,9 @@ button {
   @media (max-width: 53.125em) {
     .hero {
       grid-template-columns: 1fr; } }
+  @media (max-width: 31.25em) {
+    .hero__btn:not(:last-child) {
+      margin-bottom: 2rem; } }
   .hero__text-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -152,6 +164,9 @@ button {
     @media (max-width: 53.125em) {
       .hero__text-grid {
         order: 2; } }
+    @media (max-width: 31.25em) {
+      .hero__text-grid {
+        grid-template-columns: 1fr; } }
   .hero__heading {
     grid-column: 1 / -1;
     margin-bottom: 2rem; }
@@ -198,6 +213,9 @@ button {
         width: auto;
         margin-right: 0;
         margin-bottom: 2rem; } }
+    @media (max-width: 31.25em) {
+      .sign-up__message {
+        font-size: 2rem; } }
   .sign-up__form {
     flex: 1;
     display: grid;
@@ -205,7 +223,11 @@ button {
     grid-column-gap: 2rem; }
     @media (max-width: 53.125em) {
       .sign-up__form {
-        width: 100%; } }
+        width: 100%;
+        align-items: stretch; } }
+    @media (max-width: 31.25em) {
+      .sign-up__form {
+        grid-template-columns: 1fr; } }
   .sign-up__phone-input {
     width: 100%;
     font-size: 2rem;
@@ -213,6 +235,18 @@ button {
     border-radius: 0.5rem;
     border: none;
     margin-right: 3rem; }
+    @media (max-width: 53.125em) {
+      .sign-up__phone-input {
+        padding: 2rem; } }
+    @media (max-width: 31.25em) {
+      .sign-up__phone-input {
+        margin-right: 0;
+        margin-bottom: 3rem; } }
+  .sign-up__btn {
+    align-self: stretch; }
+    @media (max-width: 31.25em) {
+      .sign-up__btn {
+        padding: 2rem; } }
 
 .how-to {
   display: grid;
@@ -222,6 +256,10 @@ button {
   @media (max-width: 53.125em) {
     .how-to {
       grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 31.25em) {
+    .how-to {
+      grid-template-columns: 1fr;
+      grid-gap: 5rem; } }
   .how-to__intro {
     grid-column: 1 / -1;
     justify-self: center;
@@ -250,6 +288,19 @@ button {
         grid-row: 5/6;
         text-align: left;
         justify-self: center; } }
+    @media (max-width: 31.25em) {
+      .how-to__step--1, .how-to__step--2, .how-to__step--3, .how-to__step--4 {
+        grid-column: 1 / -1;
+        text-align: center;
+        justify-self: center; }
+      .how-to__step--1 {
+        grid-row: 4/5; }
+      .how-to__step--2 {
+        grid-row: 5/6; }
+      .how-to__step--3 {
+        grid-row: 6/7; }
+      .how-to__step--4 {
+        grid-row: 7/8; } }
   .how-to__number-box {
     border: 1rem solid #75bf7a;
     border-radius: 50%;
@@ -298,7 +349,8 @@ button {
     @media (max-width: 53.125em) {
       .how-to__controls {
         grid-column: 1 / -1;
-        grid-row: 3 / 4; } }
+        grid-row: 3 / 4;
+        margin-bottom: 5rem; } }
   .how-to__dot {
     width: 1.5rem;
     height: 1.5rem;
