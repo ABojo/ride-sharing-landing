@@ -128,7 +128,13 @@ button {
     .header__hamburger::before {
       transform: translateY(-1.1rem); }
     .header__hamburger::after {
-      transform: translateY(1rem); } }
+      transform: translateY(1rem); }
+    .header__hamburger.open {
+      transform: rotate(45deg); }
+      .header__hamburger.open::after {
+        display: none; }
+      .header__hamburger.open::before {
+        transform: translateY(0) rotate(-90deg); } }
   .header__logo {
     margin-right: auto;
     color: #75bf7a;

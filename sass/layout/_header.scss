@@ -28,6 +28,18 @@
       &::after {
         transform: translateY(1rem);
       }
+
+      &.open {
+        transform: rotate(45deg);
+
+        &::after {
+          display: none;
+        }
+
+        &::before {
+          transform: translateY(0) rotate(-90deg);
+        }
+      }
     }
   }
 
